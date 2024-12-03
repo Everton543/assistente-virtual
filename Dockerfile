@@ -22,5 +22,5 @@ WORKDIR /app
 EXPOSE 8080
 
 COPY --from=build /app/target/Virtual-0.0.1-SNAPSHOT.jar app.jar
-COPY /etc/secrets/.env /etc/secrets/.env
+COPY /app/etc/secrets/.env /etc/secrets/.env
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
