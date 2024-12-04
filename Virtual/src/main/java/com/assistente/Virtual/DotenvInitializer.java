@@ -4,10 +4,10 @@ import io.github.cdimascio.dotenv.Dotenv;
 
 public class DotenvInitializer {
     static {
-        String dotenvPath = "/etc/secrets/.env";
+        String dotenvPath = "../etc/secrets/.env";
 
         Dotenv dotenv = Dotenv.configure()
-            .directory("/etc/secrets")
+            .directory("../etc/secrets")
             .filename(".env")
             .load();
 
